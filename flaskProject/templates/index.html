@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>全国疫情实时监控平台</h1>
+        <div class="showTime"></div>
+    </header>
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+        <!-- 左侧图表 -->
+     <div class="col">
+        <div class="panel bar1">
+            <h2>现有确诊人数省份top7</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+
+        <div class="big-panel bar2">
+            <h2>国内新型肺炎最新动态</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+     </div>
+     <!-- 中间部分 -->
+     <div class="col">
+        <!-- no模块 -->
+        <div class="no">
+            <div class="no-hd" id="on">
+                <ul>
+                    <li>{{ confirm }}</li>
+                    <li>{{ heal }}</li>
+                    <li>{{ dead }}</li>
+                </ul>
+            </div>
+            <div class="no-bd">
+                <ul>
+                    <li>累计确诊</li>
+                    <li>累计治愈</li>
+                    <li>累计死亡</li>
+                </ul>
+            </div>
+            <div class="no-hd" id="under">
+                <ul>
+                    <li>{{ local_confirm_add }}</li>
+                    <li>{{ now_local_confirm }}</li>
+                    <li>{{ local_no_infect_add }}</li>
+                </ul>
+            </div>
+            <div class="no-bd">
+                <ul>
+                    <li>本土新增确诊</li>
+                    <li>本土现有确诊</li>
+                    <li>本土新增无症状</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 地图模块 -->
+        <div class="map">
+            <div class="buttons">
+                <ul>
+                    <li style="background-color:rgba(43, 145, 183,0.5);">本土新增确诊</li>
+                    <li>现有确诊</li>
+                    <li>累计确诊</li>
+                </ul>
+            </div>
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div class="chart"></div>
+        </div>
+
+     </div>
+     <!-- 右侧图表 -->
+     <div class="col">
+        <div class="panel line1">
+            <h2>近30天治愈和死亡人员增加变化图</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2">
+            <h2>近30天本土确诊和本土无症状人员增加变化图</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+            <h2>港澳台地区现有确诊人数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+     </div>
+    </section>
+    <script src="static/js/flexible.js"></script>
+    <script src="static/js/echarts.min.js"></script>
+    <script src="static/js/china.js"></script>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/index.js"></script>
+</body>
+</html>

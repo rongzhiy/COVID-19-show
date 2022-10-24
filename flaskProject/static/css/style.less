@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+// 声明字体
+@font-face {
+    font-family: electronicFont;
+    src: url(../font/DS-DIGIT.TTF);
+}
+body{
+    min-width: 12.8rem;
+    background: url(../images/bg.jpg) no-repeat top center;
+    line-height: 1.15;
+}
+// 头部
+header{
+    height: 1.25rem;
+    background: url(../images/head_bg.png) no-repeat;
+    background-size: 100% 100%;
+    h1{
+        font-size: 0.475rem;
+        color: #fff;
+        text-align: center;
+        line-height: 1rem;
+    }
+}
+
+// 时间
+.showTime{
+    position: absolute;
+    right: 0.375rem;
+    line-height: 0.9375rem;
+    top: 0;
+    color: rgba(255, 255, 255, .7);
+    font-size: 0.25rem;
+}
+
+// 页面主体盒子
+.mainbox{
+    display: flex;
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: .125rem .125rem 0;
+    .col{
+        flex:3;
+    }
+    .col:nth-child(2){
+        flex:5;
+        margin: 0 0.125rem 0;
+    }
+    .panel{
+        position: relative;
+        height: 3.875rem;
+        border:1px solid rgba(25, 186, 139, .17);
+        background: url(../images/line.png);
+        padding: 0 .1875rem .5rem;
+        margin-bottom: .1875rem;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid #02a6b5;
+            border-top: 2px solid #02a6b5;
+            content: "";
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid #02a6b5;
+            border-top: 2px solid #02a6b5;
+            content: "";
+        }
+        .panel-footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            &::before{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                border-left: 2px solid #02a6b5;
+                border-bottom: 2px solid #02a6b5;
+                content: "";
+            }
+            &::after{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid #02a6b5;
+                border-bottom: 2px solid #02a6b5;
+                content: "";
+            }
+        }
+        h2{
+            height: 0.6rem;
+            color: #fff;
+            line-height: 0.6rem;
+            text-align: center;
+            font-size: 0.25rem;
+            font-weight: 400;
+        }
+        .chart{
+            height: 3rem;      
+        }
+    }
+    .big-panel{
+        position: relative;
+        height: 7.9375rem;
+        border:1px solid rgba(25, 186, 139, .17);
+        background: url(../images/line.png);
+        padding: 0 .1875rem .5rem;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid #02a6b5;
+            border-top: 2px solid #02a6b5;
+            content: "";
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid #02a6b5;
+            border-top: 2px solid #02a6b5;
+            content: "";
+        }
+        .panel-footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            &::before{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                border-left: 2px solid #02a6b5;
+                border-bottom: 2px solid #02a6b5;
+                content: "";
+            }
+            &::after{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid #02a6b5;
+                border-bottom: 2px solid #02a6b5;
+                content: "";
+            }
+        }
+
+        h2{
+            height: 0.6rem;
+            color: #fff;
+            line-height: 0.6rem;
+            text-align: center;
+            font-size: 0.25rem;
+            font-weight: 400;
+        }
+        .chart{
+            height: 7.25rem;
+        }
+    }
+}
+
+// no模块
+.no{
+    background-color: rgba(101,132,226,0.1);
+    padding: 0.1875rem;
+    .no-hd{
+        position: relative;
+        margin-top: 5px;
+        border: rgba(25, 186, 139, 0.17);
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 30px;
+            height: 10px;
+            border-top: 2px solid #02a6b5;
+            border-left: 2px solid #02a6b5;
+        }
+        &::after{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 30px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-right: 2px solid #02a6b5;
+        }
+        ul{
+            display: flex;
+            li{
+                position: relative;
+                flex: 1;
+                height: .75rem;
+                font-size: 0.625rem;
+                font-family: electronicFont;
+                color: red;
+                text-align: center;
+                &:nth-child(-n+2)::after{
+                    content: "";
+                    position: absolute;
+                    top: 25%;
+                    right: 0;
+                    height: 50%;
+                    width: 1px;
+                    background-color: rgba(255,255,255,0.2);
+                }
+            }
+        }
+    }
+    .no-bd{
+        ul{
+            display: flex;
+            li{
+                flex: 1;
+                text-align: center;
+                color: rgba(255,255,255,0.7);
+                font-size: 0.225rem;
+                height: .5rem;
+                line-height: .5rem;
+                color: #ffeb7b;
+            }
+        }
+    }
+}
+
+// 地图模块
+.map{
+    position: relative;
+    height: 8.9375rem;
+    overflow: hidden;
+    .buttons{
+        position:absolute;
+        top:30px;
+        left:10px;
+        ul{
+            display: flex;
+            width: 4.6rem;
+            text-align: center;
+            color: #fff;
+            height: .625rem;
+            line-height: .625rem;
+            font-size: .225rem;
+            li{
+                flex:1;
+                border:1px solid #58cad4;
+                z-index: 999;
+                &:nth-child(1){
+                    border-bottom-left-radius: 10%;
+                    border-top-left-radius: 10%;
+                }
+                &:nth-child(3){
+                    border-bottom-right-radius: 10%;
+                    border-top-right-radius: 10%;
+                }
+            }
+        }
+
+    }
+    .map1{
+        width: 6.475rem;
+        height: 6.475rem;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%,-50%);
+        background: url(../images/map.png);
+        background-size: 100% 100%;
+        opacity: 0.3;
+    }
+    .map2{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        width: 8.0375rem;
+        height: 8.0375rem;
+        background: url(../images/lbx.png);
+        background-size: 100% 100%;
+        animation: rotate1 15s linear infinite;
+        opacity: 0.6;
+    }
+    .map3{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        z-index: 3;
+        transform: translate(-50%,-50%);
+        width: 7.075rem;
+        height: 7.075rem;
+        background: url(../images/jt.png);
+        background-size: 100% 100%;
+        animation: rotate2 10s linear infinite;
+        opacity: 0.6;
+    }
+    .chart{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        width: 100%;
+        height: 8.9375rem;
+    }
+    // 动画
+    @keyframes rotate1 {
+        form{
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        to{
+            transform: translate(-50%,-50%) rotate(360deg);
+        }
+    }
+    @keyframes rotate2 {
+        form{
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        to{
+            transform: translate(-50%,-50%) rotate(-360deg);
+        }
+    }
+}
