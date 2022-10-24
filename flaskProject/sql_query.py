@@ -84,7 +84,8 @@ def getBarData1():
     """
     :return: 返回柱状图1对应的数据
     """
-sql = "select province,sum(now_confirm) as proNowCon from details where province not in('台湾','香港','澳门') and update_time=(select update_time from details order by update_time desc limit 1) group by province order by proNowCon desc limit 7"    res = query(sql)
+    sql = "select province,sum(now_confirm) as proNowCon from details where province not in('台湾','香港','澳门') and update_time=(select update_time from details order by update_time desc limit 1) group by province order by proNowCon desc limit 7"
+    res = query(sql)
     return res
 
 def getBarData2():
